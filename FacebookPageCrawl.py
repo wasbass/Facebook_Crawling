@@ -49,7 +49,7 @@ print("抓到{}篇文章".format(len(articlebox)))
 n = len(articlebox)
 
 #創立csv檔
-with open("chang.csv" ,mode= "w",encoding="utf-8-sig" , newline='') as file:
+with open("Content_Chang.csv" ,mode= "w",encoding="utf-8-sig" , newline='') as file:
     writer = csv.writer(file ,delimiter=',')
     writer.writerow(["date","likes","comments","shares","content"])
 
@@ -59,7 +59,7 @@ def getword(word,sep):
   return w
 
 def writeincsv(L):
-  with open("chang.csv" ,mode= "a+",encoding="utf-8-sig" , newline='') as file:
+  with open("Content_Chang.csv" ,mode= "a+",encoding="utf-8-sig" , newline='') as file:
     writer = csv.writer(file ,delimiter=',')
     writer.writerow(L)
 
